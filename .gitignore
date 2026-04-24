@@ -1,0 +1,63 @@
+# ==============================================================
+# common-dimensions / .gitignore
+# ==============================================================
+
+# --- VS Code & editors --------------------------------------
+# Keep editor config (incl. SQLTools DB connections) local, not public
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# --- SQL scratch / session files ----------------------------
+# VS Code SQLTools writes these on "Run Selected Query"
+*.session.sql
+localhost.session.sql
+
+# --- OS cruft -----------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+ehthumbs.db
+
+# --- Secrets & local config ---------------------------------
+.env
+.env.*
+!.env.example
+*.secret
+secrets.*
+config.local.*
+.my.cnf
+.pgpass
+
+# --- Python (for any loader/scripts you add later) ----------
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+*.egg-info/
+
+# --- Logs & temp --------------------------------------------
+*.log
+*.tmp
+*.temp
+*.bak
+
+# --- Local databases / dumps --------------------------------
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+
+# --- Power BI (if you ever add .pbix files here) ------------
+# Uncomment if you don't want to track Power BI binaries
+# *.pbix
+# *.pbit
+
+# Note: CSVs under Data/ are intentionally tracked — don't ignore *.csv.

@@ -1,0 +1,102 @@
+location_id,state_code,state_name,region,country
+1001,AB,Alberta,Prairies,Canada
+1002,BC,"British Columbia","West Coast",Canada
+1003,MB,Manitoba,Prairies,Canada
+1004,NB,"New Brunswick",Atlantic,Canada
+1005,NL,"Newfoundland and Labrador",Atlantic,Canada
+1006,NS,"Nova Scotia",Atlantic,Canada
+1007,ON,Ontario,Central,Canada
+1008,PE,"Prince Edward Island",Atlantic,Canada
+1009,QC,Quebec,Central,Canada
+1010,SK,Saskatchewan,Prairies,Canada
+1011,NT,"Northwest Territories",Northern,Canada
+1012,NU,Nunavut,Northern,Canada
+1013,YT,Yukon,Northern,Canada
+1014,AG,Aguascalientes,North-Central,Mexico
+1015,BC,"Baja California",Northwest,Mexico
+1016,BS,"Baja California Sur",Northwest,Mexico
+1017,CM,Campeche,Southeast,Mexico
+1018,CS,Chiapas,South,Mexico
+1019,CH,Chihuahua,Northwest,Mexico
+1020,CX,"Ciudad de México",Central,Mexico
+1021,CO,Coahuila,Northeast,Mexico
+1022,CL,Colima,Western,Mexico
+1023,DG,Durango,Northwest,Mexico
+1024,EM,"Estado de México",Central,Mexico
+1025,GT,Guanajuato,North-Central,Mexico
+1026,GR,Guerrero,South,Mexico
+1027,HG,Hidalgo,Eastern,Mexico
+1028,JA,Jalisco,Western,Mexico
+1029,MI,Michoacán,Western,Mexico
+1030,MO,Morelos,Central,Mexico
+1031,NA,Nayarit,Western,Mexico
+1032,NL,"Nuevo León",Northeast,Mexico
+1033,OA,Oaxaca,South,Mexico
+1034,PU,Puebla,Eastern,Mexico
+1035,QE,Querétaro,North-Central,Mexico
+1036,QR,"Quintana Roo",Southeast,Mexico
+1037,SL,"San Luis Potosí",North-Central,Mexico
+1038,SI,Sinaloa,Northwest,Mexico
+1039,SO,Sonora,Northwest,Mexico
+1040,TB,Tabasco,Southeast,Mexico
+1041,TM,Tamaulipas,Northeast,Mexico
+1042,TL,Tlaxcala,Eastern,Mexico
+1043,VE,Veracruz,Eastern,Mexico
+1044,YU,Yucatán,Southeast,Mexico
+1045,ZA,Zacatecas,North-Central,Mexico
+1046,AL,Alabama,South,"United States"
+1047,AK,Alaska,West,"United States"
+1048,AZ,Arizona,West,"United States"
+1049,AR,Arkansas,South,"United States"
+1050,CA,California,West,"United States"
+1051,CO,Colorado,West,"United States"
+1052,CT,Connecticut,Northeast,"United States"
+1053,DE,Delaware,South,"United States"
+1054,FL,Florida,South,"United States"
+1055,GA,Georgia,South,"United States"
+1056,HI,Hawaii,West,"United States"
+1057,ID,Idaho,West,"United States"
+1058,IL,Illinois,Midwest,"United States"
+1059,IN,Indiana,Midwest,"United States"
+1060,IA,Iowa,Midwest,"United States"
+1061,KS,Kansas,Midwest,"United States"
+1062,KY,Kentucky,South,"United States"
+1063,LA,Louisiana,South,"United States"
+1064,ME,Maine,Northeast,"United States"
+1065,MD,Maryland,South,"United States"
+1066,MA,Massachusetts,Northeast,"United States"
+1067,MI,Michigan,Midwest,"United States"
+1068,MN,Minnesota,Midwest,"United States"
+1069,MS,Mississippi,South,"United States"
+1070,MO,Missouri,Midwest,"United States"
+1071,MT,Montana,West,"United States"
+1072,NE,Nebraska,Midwest,"United States"
+1073,NV,Nevada,West,"United States"
+1074,NH,"New Hampshire",Northeast,"United States"
+1075,NJ,"New Jersey",Northeast,"United States"
+1076,NM,"New Mexico",West,"United States"
+1077,NY,"New York",Northeast,"United States"
+1078,NC,"North Carolina",South,"United States"
+1079,ND,"North Dakota",Midwest,"United States"
+1080,OH,Ohio,Midwest,"United States"
+1081,OK,Oklahoma,South,"United States"
+1082,OR,Oregon,West,"United States"
+1083,PA,Pennsylvania,Northeast,"United States"
+1084,RI,"Rhode Island",Northeast,"United States"
+1085,SC,"South Carolina",South,"United States"
+1086,SD,"South Dakota",Midwest,"United States"
+1087,TN,Tennessee,South,"United States"
+1088,TX,Texas,South,"United States"
+1089,UT,Utah,West,"United States"
+1090,VT,Vermont,Northeast,"United States"
+1091,VA,Virginia,South,"United States"
+1092,WA,Washington,West,"United States"
+1093,WV,"West Virginia",South,"United States"
+1094,WI,Wisconsin,Midwest,"United States"
+1095,WY,Wyoming,West,"United States"
+1096,DC,"District of Columbia",South,"United States"
+1097,AS,"American Samoa",Territory,"United States"
+1098,GU,Guam,Territory,"United States"
+1099,MP,"Northern Mariana Islands",Territory,"United States"
+1100,PR,"Puerto Rico",Territory,"United States"
+1101,VI,"U.S. Virgin Islands",Territory,"United States"
