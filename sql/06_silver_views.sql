@@ -51,8 +51,11 @@ SELECT
     a.created_at               AS account_created_date
 FROM accounts a
 LEFT JOIN common_db.geography g
-       ON g.state_code = a.state_province
-      AND g.country    = a.country;
+       -- Cross-database JOIN: common_db defaults to utf8mb4_0900_ai_ci
+       -- while sales_pipeline uses utf8mb4_unicode_ci. Force both sides
+       -- to the sales_pipeline collation to avoid error 1267.
+       ON g.state_code COLLATE utf8mb4_unicode_ci = a.state_province
+      AND g.country    COLLATE utf8mb4_unicode_ci = a.country;
 
 
 -- ---------------------------------------------------------------------
@@ -152,12 +155,64 @@ FROM opportunities o;
 
 
 -- ---------------------------------------------------------------------
+-- bridge_opportunity_date
+--
+-- Purpose: a "factless fact" / bridge table that unpivots the three date
+-- columns on opportunities (created_date, expected_close_date,
+-- actual_close_date) into one row per (opportunity, date_type) pair.
+--
+-- Why this exists:
+--   fact_opportunities has three date columns — i.e., dim_date plays three
+--   roles against it. In Power BI, multiple active relationships to the same
+--   dimension aren't allowed. This bridge lets you model a single active
+--   relationship from bridge_opportunity_date.date to dim_date.Date, and then
+--   slice by date_type to pick which role you're analyzing (e.g.,
+--   "pipeline created per month" vs. "deals closing per month").
+--
+-- Grain: one row per (opportunity_id, date_type).
+--   * Every opportunity contributes at least 2 rows (created + expected_close).
+--   * Closed opportunities contribute a 3rd row (actual_close_date).
+--   * Open opportunities: actual_close_date IS NULL, so that row is omitted.
+--     Expected row count = 50 + 50 + <closed count> = 131 for current data.
+--
+-- How it's built: MySQL has no UNPIVOT operator, so we UNION ALL three
+-- SELECTs — one per date column. This is exactly what Power Query's
+-- "Unpivot Columns" transform produces under the hood.
+-- ---------------------------------------------------------------------
+CREATE OR REPLACE VIEW bridge_opportunity_date AS
+SELECT
+    opportunity_id,
+    created_date            AS date,
+    'created_date'          AS date_type
+FROM opportunities
+
+UNION ALL
+
+SELECT
+    opportunity_id,
+    expected_close_date     AS date,
+    'expected_close_date'   AS date_type
+FROM opportunities
+
+UNION ALL
+
+SELECT
+    opportunity_id,
+    actual_close_date       AS date,
+    'actual_close_date'     AS date_type
+FROM opportunities
+WHERE actual_close_date IS NOT NULL;    -- open deals haven't closed yet
+
+
+-- ---------------------------------------------------------------------
 -- Smoke tests (uncomment to run):
 --
 -- SELECT COUNT(*) FROM fact_opportunities;         -- expect 50
 -- SELECT COUNT(*) FROM dim_accounts;               -- expect 50
 -- SELECT COUNT(*) FROM dim_sales_reps;             -- expect 7
 -- SELECT COUNT(*) FROM dim_date;                   -- expect common_db row count
+-- SELECT COUNT(*) FROM bridge_opportunity_date;      -- expect 50 + 50 + closed_count
+-- SELECT date_type, COUNT(*) FROM bridge_opportunity_date GROUP BY date_type;
 --
 -- -- A simple star join: pipeline by rep region, weighted
 -- SELECT r.region, SUM(f.weighted_amount) AS weighted_pipeline
