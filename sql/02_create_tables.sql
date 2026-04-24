@@ -76,7 +76,7 @@ CREATE TABLE opportunities (
     opportunity_name    VARCHAR(200)    NOT NULL,
     account_id          INT             NOT NULL,
     sales_rep_id        INT             NOT NULL,
-    product_id          INT             NOT NULL,
+    product_id          INT             NULL,           -- nullable: products optional for now
     stage               VARCHAR(25)     NOT NULL,
     amount              DECIMAL(12,2)   NOT NULL,   -- total deal value
     quantity            INT             NOT NULL DEFAULT 1,
