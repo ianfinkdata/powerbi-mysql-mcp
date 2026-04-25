@@ -32,7 +32,12 @@ select
 
 -- select * from accounts;
 
-select * from total_sales_by_state order by total_revenue desc 
+select *, total_revenue / clients as revenue_per_client 
+  from total_sales_by_state 
+  group by state_province, country
+  order by country desc,
+  revenue_per_client desc 
+
 ;
 
 
