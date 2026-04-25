@@ -1,39 +1,40 @@
-AB,Canada,2,2200000
-CA,United States,5,1720000
-QC,Canada,2,1650000
-CH,Mexico,1,1530000
-OH,United States,1,1500000
-MA,United States,2,1418000
-NY,United States,3,850000
-PA,United States,1,380000
-WA,United States,1,340000
-MN,United States,1,250000
-MB,Canada,1,240000
-ON,Canada,2,210000
-CX,Mexico,1,190000
-BC,Canada,2,175000
-JA,Mexico,1,165000
-NH,United States,1,45000
-OR,United States,1,32000
-IL,United States,1,22000
-NC,United States,1,15000
-BS,Mexico,1,0
-NL,Mexico,1,0
-NB,Canada,1,0
-QR,Mexico,1,0
-PE,Canada,1,0
-VE,Mexico,1,0
-SO,Mexico,1,0
-NS,Canada,1,0
-TN,United States,1,0
-NV,United States,1,0
-LA,United States,1,0
-FL,United States,1,0
-CO,United States,1,0
-MT,United States,1,0
-WI,United States,1,0
-VA,United States,1,0
-AZ,United States,1,0
-GA,United States,1,0
-TX,United States,1,0
-MI,United States,1,0
+state_province,country,clients,total_revenue,revenue_per_client
+OH,United States,1,1500000,1500000
+MA,United States,2,1418000,709000
+PA,United States,1,380000,380000
+CA,United States,5,1720000,344000
+WA,United States,1,340000,340000
+NY,United States,3,850000,283333.333333
+MN,United States,1,250000,250000
+NH,United States,1,45000,45000
+OR,United States,1,32000,32000
+IL,United States,1,22000,22000
+NC,United States,1,15000,15000
+TN,United States,1,0,0
+NV,United States,1,0,0
+LA,United States,1,0,0
+CO,United States,1,0,0
+FL,United States,1,0,0
+MT,United States,1,0,0
+VA,United States,1,0,0
+AZ,United States,1,0,0
+GA,United States,1,0,0
+TX,United States,1,0,0
+MI,United States,1,0,0
+WI,United States,1,0,0
+CH,Mexico,1,1530000,1530000
+CX,Mexico,1,190000,190000
+JA,Mexico,1,165000,165000
+SO,Mexico,1,0,0
+VE,Mexico,1,0,0
+QR,Mexico,1,0,0
+NL,Mexico,1,0,0
+BS,Mexico,1,0,0
+AB,Canada,2,2200000,1100000
+QC,Canada,2,1650000,825000
+MB,Canada,1,240000,240000
+ON,Canada,2,210000,105000
+BC,Canada,2,175000,87500
+NB,Canada,1,0,0
+PE,Canada,1,0,0
+NS,Canada,1,0,0
